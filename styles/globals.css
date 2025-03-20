@@ -1,0 +1,79 @@
+body {
+  background-color: #1a202c; /* bg-gray-900 */
+  color: #ffffff; /* text-white */
+  font-family: 'IBM Plex Mono', monospace; /* font-pixel */
+}
+
+a {
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #fbbf24; /* hover:text-yellow-400 */
+}
+
+.pixel-border {
+  border: 4px solid white;
+  image-rendering: pixelated;
+}
+
+.img-contorno {
+  display: block;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  background-color: transparent;
+}
+
+.skill-icon i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-icon:hover i {
+  transform: translateY(-5px) rotate(5deg);
+}
+
+nav {
+  height: 120px;
+  z-index: 1050; /* Adicione esta linha para garantir que o menu tenha um z-index mais alto */
+}
+
+footer {
+  height: 120px;
+}
+
+.container.mt-5.text-center .text-left {
+  margin-top: 3rem;
+  width: 100%;
+  text-align: left;
+}
+
+.img-main {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 15px 10px;
+}
+
+/* Adicione estas regras para ajustar o fundo do menu no modo mobile */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com 80% de opacidade */
+    border-radius: 12px 5px;
+    z-index: 1050; /* Adicione esta linha para garantir que o menu tenha um z-index mais alto */
+  }
+}
+
+.list-group-item {
+  z-index: 1; /* Adicione esta linha para garantir que os certificados tenham um z-index menor */
+}
+.text-left {
+  text-align: left;
+}
+
+.img-main {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 15px 10px;
+}
