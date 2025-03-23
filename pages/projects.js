@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const Projects = () => {
     const [repos, setRepos] = useState([]);
+    const [certificados, setCertificados] = useState([]);
     const [filter, setFilter] = useState('all');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -27,7 +28,19 @@ const Projects = () => {
             }
         };
 
+        const fetchCertificados = async () => {
+            try {
+                const response = await fetch('/api/certificados');
+                if (!response.ok) throw new Error('Erro ao buscar certificados');
+                const data = await response.json();
+                setCertificados(data);
+            } catch (err) {
+                console.error('Erro ao buscar certificados:', err);
+            }
+        };
+
         fetchRepos();
+        fetchCertificados();
         return () => controller.abort();
     }, []);
 
